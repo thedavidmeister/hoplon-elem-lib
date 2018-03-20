@@ -2,17 +2,21 @@
  (:require
   [hoplon.core :as h]
   [javelin.core :as j]
-  syntax-highlighter.hoplon)
- (:require-macros [elem-lib.core :refer [elem]]))
+  syntax-highlighter.hoplon
+  elem-lib.hoplon)
+ (:require-macros [elem-lib.core :refer [elem']]))
 
 (h/html
+ (h/head
+  (syntax-highlighter.hoplon/stylesheet))
  (h/body
-  (elem-lib.core/elem
+  (elem-lib.hoplon/elem
    "Simple div"
    "This is just a div produced by hoplon"
-   h/div
+   #'h/div
    [["No args"]
     ["Hello world!" "Hello world!"]
     ["A cell" (j/cell "A cell")]
-    ["Attributes and content" :class "some-class" "Hi!"]])
-  (syntax-highlighter.hoplon/syntax-highlighter)))
+    ["Attributes and content" :class "some-class" "Hi!"]
+    ["A counter" (j/with-let [c (j/cell 0)]
+                  (h/with-interval 1000 (swap! c inc)))]])))
