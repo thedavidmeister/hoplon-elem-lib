@@ -1,13 +1,11 @@
 (ns ^{:hoplon/page "index.html"} pages.index
  (:require
   [hoplon.core :as h]
-  [javelin.core :as j]
-  [elem-lib.core :refer-macros [elem]]))
+  [javelin.core :as j])
+ (:require-macros [elem-lib.core :refer [elem]]))
 
 (h/html
  (h/body
-  (h/div
-   "Super simple pattern library")
   (elem-lib.core/elem
    "Simple div"
    "This is just a div produced by hoplon"
