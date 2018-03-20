@@ -1,6 +1,7 @@
 (ns syntax-highlighter.hoplon
  (:require
   [hoplon.core :as h]
+  [javelin.core :as j]
   syntax-highlighter.data
   cljsjs.highlight
   cljsjs.highlight.langs.clojure))
@@ -15,5 +16,6 @@
 
 (defn with-syntax-highlighter
  [el]
- (h/when-dom el
-  (.highlightBlock js/hljs el)))
+ (j/with-let [el el]
+  (h/with-dom el
+   (.highlightBlock js/hljs el))))

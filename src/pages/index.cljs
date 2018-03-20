@@ -7,6 +7,8 @@
  (:require-macros [elem-lib.core :refer [elem']]))
 
 (h/html
+ (h/head
+  (syntax-highlighter.hoplon/stylesheet))
  (h/body
   (elem-lib.hoplon/elem
    "Simple div"
@@ -17,4 +19,5 @@
     ["A cell" (j/cell "A cell")]
     ["Attributes and content" :class "some-class" "Hi!"]
     ["A counter" (j/with-let [c (j/cell 0)]
+                  (j/cell= (prn c))
                   (h/with-interval 1000 (swap! c inc)))]])))

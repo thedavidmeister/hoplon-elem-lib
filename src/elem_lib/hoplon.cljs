@@ -2,8 +2,8 @@
  (:require
   [javelin.core :as j]
   [hoplon.core :as h]
-  camel-snake-kebab.core))
-
+  camel-snake-kebab.core
+  syntax-highlighter.hoplon))
 
 (defn elem
  [name desc f examples]
@@ -17,9 +17,10 @@
   (h/for-tpl [[d & args] examples]
    (h/div :class/elem-lib "elem-lib-example"
     (h/h3 d)
-    (h/code
-     :class/elem-lib "clojure"
-     (h/for-tpl [arg args]
-      (h/div
-       (let [arg' @arg]
-        (j/formula-of [arg'] (prn-str @arg))))))))))
+    (syntax-highlighter.hoplon/with-syntax-highlighter
+     (h/code
+      :class/elem-lib "clojure"
+      (h/for-tpl [arg args]
+       (h/div
+        (let [arg' @arg]
+         (j/formula-of [arg'] (prn-str @arg)))))))))))
