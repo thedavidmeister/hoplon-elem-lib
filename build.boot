@@ -15,7 +15,7 @@
    [thedavidmeister/boot-github-pages "0.1.0-SNAPSHOT"]
 
    ; everything else...
-   [camel-snake-kebab "0.4.1-SNAPSHOT"]])
+   [camel-snake-kebab "0.4.0"]])
 
 (require
  '[adzerk.boot-cljs :refer [cljs]]
