@@ -3,8 +3,7 @@
   [hoplon.core :as h]
   [javelin.core :as j]
   syntax-highlighter.hoplon
-  elem-lib.hoplon)
- (:require-macros [elem-lib.core :refer [elem']]))
+  elem-lib.hoplon))
 
 (h/html
  (h/head
