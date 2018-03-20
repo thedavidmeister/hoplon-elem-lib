@@ -10,7 +10,6 @@
  (h/div
   :class/elem-lib "elem-lib-item"
   :id (camel-snake-kebab.core/->kebab-case-string name)
-
   (h/h2 name)
   (h/code (str f))
   (h/p desc)
