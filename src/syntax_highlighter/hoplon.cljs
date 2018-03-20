@@ -14,8 +14,9 @@
    :rel "stylesheet"
    :type "text/css")))
 
+(defn highlight! [el] (.highlightBlock js/hljs el))
+
 (defn with-syntax-highlighter
  [el]
  (j/with-let [el el]
-  (h/with-dom el
-   (.highlightBlock js/hljs el))))
+  (h/with-dom el (highlight! el))))

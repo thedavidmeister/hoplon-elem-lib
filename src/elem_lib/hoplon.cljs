@@ -17,10 +17,11 @@
   (h/for-tpl [[d & args] examples]
    (h/div :class/elem-lib "elem-lib-example"
     (h/h3 d)
-    (h/code
-     :class/elem-lib "clojure"
-     (h/for-tpl [arg args]
-      (h/div
-       (let [arg' @arg]
-        (j/formula-of [arg'] (prn-str @arg))))))
+    (h/for-tpl [arg args]
+     (h/code
+      :class/elem-lib "clojure"
+      (let [arg' @arg]
+       (j/formula-of
+        [arg']
+        (pr-str @arg)))))
     (apply @f @args)))))
