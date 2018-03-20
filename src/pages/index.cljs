@@ -1,7 +1,8 @@
 (ns ^{:hoplon/page "index.html"} pages.index
  (:require
   [hoplon.core :as h]
-  [javelin.core :as j])
+  [javelin.core :as j]
+  syntax-highlighter.hoplon)
  (:require-macros [elem-lib.core :refer [elem]]))
 
 (h/html
@@ -13,4 +14,5 @@
    [["No args"]
     ["Hello world!" "Hello world!"]
     ["A cell" (j/cell "A cell")]
-    ["Attributes and content" :class "some-class" "Hi!"]])))
+    ["Attributes and content" :class "some-class" "Hi!"]])
+  (syntax-highlighter.hoplon/syntax-highlighter)))

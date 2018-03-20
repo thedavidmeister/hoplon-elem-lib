@@ -16,7 +16,8 @@
    [crisptrutski/boot-cljs-test "0.3.5-SNAPSHOT"]
 
    ; everything else...
-   [camel-snake-kebab "0.4.0"]])
+   [camel-snake-kebab "0.4.0"]
+   [cljsjs/highlight "9.12.0-1"]])
 
 (require
  '[adzerk.boot-cljs :refer [cljs]]
