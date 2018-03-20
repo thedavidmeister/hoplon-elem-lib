@@ -2,11 +2,12 @@
 
 Tiny element library (20 LOC!) for Hoplon.
 
-Supports:
+Features:
 
-- Showing current state of args to the element
+- Shows current state of args to the element
 - Code syntax highlighting
-- Cell-backed dynamic elements (and codes)
+- Cell-backed dynamic elements (and code blocks)
+- Just a fn™
 
 ## Usage
 
