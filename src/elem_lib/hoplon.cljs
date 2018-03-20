@@ -18,10 +18,12 @@
    (h/div :class/elem-lib "elem-lib-example"
     (h/h3 d)
     (h/for-tpl [arg args]
-     (h/code
-      :class/elem-lib "clojure"
-      (let [arg' @arg]
-       (j/formula-of
-        [arg']
-        (pr-str @arg)))))
+     (j/with-let [code-block (h/code)]
+      (code-block
+       :class/elem-lib "clojure"
+       (let [arg' @arg]
+        (j/formula-of
+         [arg']
+         (h/with-animation-frame (syntax-highlighter.hoplon/highlight! code-block))
+         (pr-str @arg))))))
     (apply @f @args)))))

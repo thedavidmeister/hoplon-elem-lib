@@ -19,5 +19,4 @@
     ["A cell" (j/cell "A cell")]
     ["Attributes and content" :class "some-class" "Hi!"]
     ["A counter" (j/with-let [c (j/cell 0)]
-                  (j/cell= (prn c))
                   (h/with-interval 1000 (swap! c inc)))]])))
