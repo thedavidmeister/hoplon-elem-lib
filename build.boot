@@ -13,6 +13,7 @@
    [adzerk/boot-cljs "2.1.4"]
    [tailrecursion/boot-jetty  "0.1.3"]
    [thedavidmeister/boot-github-pages "0.1.0-SNAPSHOT"]
+   [crisptrutski/boot-cljs-test "0.3.5-SNAPSHOT"]
 
    ; everything else...
    [camel-snake-kebab "0.4.0"]])
@@ -21,7 +22,8 @@
  '[adzerk.boot-cljs :refer [cljs]]
  '[hoplon.boot-hoplon :refer [hoplon prerender]]
  '[tailrecursion.boot-jetty :refer [serve]]
- '[thedavidmeister.boot-github-pages :refer [github-pages]])
+ '[thedavidmeister.boot-github-pages :refer [github-pages]]
+ '[crisptrutski.boot-cljs-test :refer [test-cljs]])
 
 (def compiler-options
  {})
