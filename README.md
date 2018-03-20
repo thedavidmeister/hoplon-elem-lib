@@ -9,6 +9,18 @@ Features:
 - Cell-backed dynamic elements (and code blocks)
 - Just a fn™
 
+## Installation
+
+[![Clojars Project](https://img.shields.io/clojars/v/thedavidmeister/hoplon-elem-lib.svg)](https://clojars.org/thedavidmeister/hoplon-elem-lib)
+
+`[thedavidmeister/hoplon-elem-lib "0.1.0"]`
+
+```clojure
+(:require
+  elem-lib.hoplon
+  syntax-highlighter.hoplon)
+```
+
 ## Usage
 
 0. Include the stylesheet for syntax highlighting somewhere in the page `syntax-highlighter.hoplon/stylesheet`
