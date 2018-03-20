@@ -3,7 +3,7 @@
   [hoplon.core :as h]
   camel-snake-kebab.core))
 
-(defmacro pattern
+(defmacro elem
  [name desc f examples]
  (list 'h/div
   :class "pattern"
@@ -14,7 +14,7 @@
   `(h/p ~desc)
   `(map
     (fn [[~'d & ~'args]]
-     (h/div :class "card pattern-item"
+     (h/div :class "card elem-lib-item"
       (h/h3 ~'d)
       (h/code :class "clojure"
        (map
