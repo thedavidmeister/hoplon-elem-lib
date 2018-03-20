@@ -17,10 +17,10 @@
   (h/for-tpl [[d & args] examples]
    (h/div :class/elem-lib "elem-lib-example"
     (h/h3 d)
-    (syntax-highlighter.hoplon/with-syntax-highlighter
-     (h/code
-      :class/elem-lib "clojure"
-      (h/for-tpl [arg args]
-       (h/div
-        (let [arg' @arg]
-         (j/formula-of [arg'] (prn-str @arg)))))))))))
+    (h/code
+     :class/elem-lib "clojure"
+     (h/for-tpl [arg args]
+      (h/div
+       (let [arg' @arg]
+        (j/formula-of [arg'] (prn-str @arg))))))
+    (apply @f @args)))))
