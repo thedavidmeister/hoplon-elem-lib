@@ -47,4 +47,4 @@ It's based on the following example code:
 
 In case you don't want to look at the demo for some reason, the elements look like this:
 
-![gif of an element][http://g.recordit.co/gDrwWLKvZs.gif]
+![gif of an element](http://g.recordit.co/gDrwWLKvZs.gif)
