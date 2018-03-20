@@ -1,5 +1,5 @@
 (def project 'thedavidmeister/hoplon-elem-lib)
-(def version "0.1.0-SNAPSHOT")
+(def version "0.1.0")
 
 (set-env!
  :source-paths #{"src"}
@@ -47,10 +47,22 @@
    :optimizations :advanced
    :compiler-options compiler-options)))
 
-(deftask deploy
+(deftask deploy-gh-pages
  []
  (comp
   (build)
   (target
    :dir #{"gh-pages"})
   (github-pages)))
+
+(deftask deploy-clojars
+ []
+ (comp
+  (build-jar)
+  (push-release)))
+
+(deftask deploy
+ []
+ (comp
+  (deploy-gh-pages)
+  (deploy-clojars)))
