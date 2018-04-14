@@ -83,7 +83,9 @@ value of the Javelin cell will be dynamically updated and syntax highlighted.
 (elem-lib.hoplon/elem
  "A javelin cell"
  "Cell fns can also be directly referenced by the lib."
- #'my.ns/halving-cell
+ #'pages.index/halving-cell
  [["Halving counter" (j/with-let [c (j/cell 0)]
                       (h/with-interval 1000 (swap! c inc)))]])
 ```
+
+![gif of an element](http://g.recordit.co/GzKka6cw7o.gif)
