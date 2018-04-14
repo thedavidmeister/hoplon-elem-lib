@@ -69,3 +69,21 @@ The demo showcases the following example code:
 In case you don't want to look at the demo for some reason, the elements look like this:
 
 ![gif of an element](http://g.recordit.co/gDrwWLKvZs.gif)
+
+### Javelin cells
+
+Functions that return javelin cells can also be used as elems in the lib. The
+value of the Javelin cell will be dynamically updated and syntax highlighted.
+
+```clojure
+(defn halving-cell
+ [c]
+ (j/cell= (* 0.5 c)))
+
+(elem-lib.hoplon/elem
+ "A javelin cell"
+ "Cell fns can also be directly referenced by the lib."
+ #'my.ns/halving-cell
+ [["Halving counter" (j/with-let [c (j/cell 0)]
+                      (h/with-interval 1000 (swap! c inc)))]])
+```
