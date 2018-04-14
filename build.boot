@@ -1,5 +1,5 @@
 (def project 'thedavidmeister/hoplon-elem-lib)
-(def version "0.1.0")
+(def version "0.2.0")
 (def description "Tiny element library for Hoplon.")
 (def github-url "https://github.com/thedavidmeister/hoplon-elem-lib")
 
