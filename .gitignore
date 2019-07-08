@@ -1,1 +1,7 @@
-.lein-env
+.cpcache
+.npm
+.shadow-cljs
+public/js
+node_modules
+.nrepl-port
+

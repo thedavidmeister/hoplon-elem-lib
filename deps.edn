@@ -1,0 +1,19 @@
+{
+ :deps
+ {
+  org.clojure/clojurescript
+  {:mvn/version "1.10.520"}
+
+  hoplon/hoplon
+  {:git/url "https://github.com/hoplon/hoplon.git"
+   :sha "eb8065746be52f80645a080af16078cf1caf52fa"}
+
+  thheller/shadow-cljs
+  {:mvn/version "2.8.40"}
+
+  camel-snake-kebab
+  {:mvn/version "0.4.0"}
+
+  thedavidmeister/hoplon-syntax-highlighter
+  {:git/url "https://github.com/thedavidmeister/hoplon-syntax-highlighter"
+   :sha "ee56cd5f7720957e115bfd1166ec1553fd2cca85"}}}
